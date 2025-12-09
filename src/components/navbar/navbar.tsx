@@ -8,7 +8,7 @@ import {
 
 export default function Navbar() {
   return (
-    <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full flex justify-center z-50">
+    <div className="fixed top-0 w-full z-50">
       <header className="container mx-auto px-8 py-4 max-w-7xl">
         <div className="bg-white rounded-3xl px-8 py-4 flex items-center justify-between shadow-lg">
           {/* Logo */}
@@ -55,9 +55,15 @@ export default function Navbar() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem>BPH</DropdownMenuItem>
-                <DropdownMenuItem>Departemen Akademik & Keilmuan</DropdownMenuItem>
-                <DropdownMenuItem>Departemen Acara & Kehumasan</DropdownMenuItem>
-                <DropdownMenuItem>Departemen Media & Publikasi</DropdownMenuItem>
+                <DropdownMenuItem>
+                  Departemen Akademik & Keilmuan
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  Departemen Acara & Kehumasan
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  Departemen Media & Publikasi
+                </DropdownMenuItem>
                 <DropdownMenuItem>Departemen Olahraga & Seni</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
