@@ -1,4 +1,10 @@
 import { ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Navbar() {
   return (
@@ -37,15 +43,24 @@ export default function Navbar() {
             >
               Tentang HIMASI
             </a>
-            <div className="flex items-center gap-1 cursor-pointer">
-              <a
-                href="#"
-                className="text-[#003d7a] font-semibold hover:text-[#0052a3]"
-              >
-                Struktur Organisasi
-              </a>
-              <ChevronDown size={18} className="text-[#003d7a]" />
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 cursor-pointer">
+                <a
+                  href="#"
+                  className="text-[#003d7a] font-semibold hover:text-[#0052a3]"
+                >
+                  Struktur Organisasi
+                </a>
+                <ChevronDown size={18} className="text-[#003d7a]" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem>BPH</DropdownMenuItem>
+                <DropdownMenuItem>Departemen Akademik & Keilmuan</DropdownMenuItem>
+                <DropdownMenuItem>Departemen Acara & Kehumasan</DropdownMenuItem>
+                <DropdownMenuItem>Departemen Media & Publikasi</DropdownMenuItem>
+                <DropdownMenuItem>Departemen Olahraga & Seni</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a
               href="#"
               className="text-[#003d7a] font-semibold hover:text-[#0052a3]"
